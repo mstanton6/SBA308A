@@ -10,7 +10,9 @@ function submitrequest(event) {
     */
     event.preventDefault();
 
-    getData();
+    // console.log('breed: ' + breedSelect.value);
+
+    getImages();
 }
 async function getBreeds() {
 
@@ -35,7 +37,6 @@ async function getBreeds() {
         console.log(response);
 
         // load the breeds into a dropdown
-
         let breeds = response;
 
         breeds.forEach((breed) => {
@@ -50,18 +51,13 @@ async function getBreeds() {
     }
 }
 
-async function getData() {
+async function getImages() {
 
-    // cat key & url 
-    //const API_KEY = "live_l6K0Ng9umniilHFGbpsCigtzIp34ujnsJMKveGnWY3vHe9JRad4j4zJWJrKBmPYZ";
-    // const URL = "https://api.thecatapi.com/v1/breeds/?apikey=${API_KEY}";
+    // console.log('breed: ' + breedSelect.value);
+    let thebreed = breedSelect.value;
 
-    // openweathermap.org
-    // const API_KEY = "07314651b0da5d10af46e598b6c17473";
-    // const URL = `https://api.openweathermap.org/geo/1.0/direct?q=plymouth,MI,US&limit=2&appid=${API_KEY}`
-
-    // The Dog API
-    const URL = 'https://api.thedogapi.com/v1/images/search?limit=10'; // images &breed_ids=121
+    const URL = `https://api.thedogapi.com/v1/images/search?limit=10&breed_id=${thebreed}`; // images,  &breed_ids=121
+    console.log('url: ' + URL);
     // const URL = 'https://api.thedogapi.com/v1/breeds/search?limit=100'; // // breeds
 
     const API_KEY = "live_wTOy3uULk02VbHBNCc9woslHPDaPeFot92A8gm98zQcztpWbWM7Bwd1Ba9HotVVc";
@@ -75,13 +71,19 @@ async function getData() {
             },
         });
 
-        //let response = await fetch(URL);
-
         // parse the incoming data into JSON so we can use it
         response = await response.json();
-        let breeds = response;
+        //let breeds = response;
 
         console.log(response);
+
+        response.forEach((img) => {
+           // let thisitem = Carousel.createCarouselItem(img.url, "Dog Anything", img.id);
+            //Carousel.appendCarousel(thisitem);
+            console.log(img.url);
+        });
+
+
 
         // breeds.forEach((breed) => {
         //   const option = document.createElement("option");
