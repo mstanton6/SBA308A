@@ -3,8 +3,9 @@
 
 The other feature is to select "Choose File". The user selects a dog photo and uploads it by clicking "Upload file" I had this working.
 
+*******************************************************************************************************************************************************
 ******* But it appears that I reached my monthly quota of 5, so now I get a 400 error. I put an alert message that says "Monthly upload quota to the dogapi was reached"
-
+*******************************************************************************************************************************************************
 
 # Technologies Used:
 -  HTML (5)
