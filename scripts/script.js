@@ -33,9 +33,6 @@ async function getBreeds() {
 
         // parse the incoming data into JSON so we can use it
         response = await response.json();
-        //let breeds = response;
-
-        // console.log(response);
 
         // load the breeds into a dropdown
         let breeds = response;
