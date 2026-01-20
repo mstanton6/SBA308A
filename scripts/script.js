@@ -1,4 +1,4 @@
-import { putData as putData2 } from './putremote.js';
+import { putData as putData2     } from './putremote.js';
 window.putData2 = putData2;
 import {getImages as getImages2} from './images.js';
 
@@ -21,7 +21,7 @@ async function getBreeds() {
     // The Dog API
     const URL = 'https://api.thedogapi.com/v1/breeds/search?limit=100'; // get the breeds, 100 was the max I was able to get from this site
 
-    const API_KEY = "live_wTOy3uULk02VbHBNCc9woslHPDaPeFot92A8gm98zQcztpWbWM7Bwd1Ba9HotVVc";
+    const API_KEY = "live_EEsIc8mTmBoGlUyOjOcgeakuW3ZZTdSDc1L083sC6DfwIMbGBOM3oMkOxdxm4Pxa";  // J gmail api
 
     try {
         // makes request to URL for data

@@ -4,7 +4,7 @@ export async function putData(event) {
 
     const URL = `https://api.thedogapi.com/v1/images/upload`; // images,  &breed_id
 
-    const API_KEY = "live_wTOy3uULk02VbHBNCc9woslHPDaPeFot92A8gm98zQcztpWbWM7Bwd1Ba9HotVVc";
+   const API_KEY = "live_EEsIc8mTmBoGlUyOjOcgeakuW3ZZTdSDc1L083sC6DfwIMbGBOM3oMkOxdxm4Pxa";  // J gmail api
 
     const fileInput = document.getElementById("userInput");
     const file = fileInput.files[0];
@@ -28,7 +28,9 @@ export async function putData(event) {
 
         );
 
-        if (response.status == 200) {
+        console.log(response);
+
+        if (response.status == 200 || response.status == 201 || response.status == 202) {
             alert("Your file was uploaded");
         }
         else if (response.status == 400) {

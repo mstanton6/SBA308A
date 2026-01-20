@@ -1,10 +1,10 @@
 # My Application Name and description
 -This web site is a a site for dogs using the thedogapi api site. The application starts by populating the dropdown with the dog breeds. Please note: the download limited me to 100 breeds. Then, the user selects a breed and clicks the "Submit" button. All photos available from the thedogapi (10 or less). 
 
-The other feature is to select "Choose File". The user selects a dog photo and uploads it by clicking "Upload file" I had this working.
+The other feature is to select "Choose File". The user selects a dog photo and uploads it by clicking "Upload file" 
 
 *******************************************************************************************************************************************************
-******* But it appears that I reached my monthly quota of 5, so now I get a 400 error. I put an alert message that says "Monthly upload quota to the dogapi was reached"
+******* Note: if you reach my monthly quota of 5, then you get a 400 error when uploading a file. I put an alert message that says "Monthly upload quota to the dogapi was reached" if that is the case.
 *******************************************************************************************************************************************************
 
 # Technologies Used:
